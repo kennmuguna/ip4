@@ -1,0 +1,17 @@
+<h1><%= @kiatu_store.name() %><h1>
+
+<% if @kiatu_stores.brand().any?() %>
+    <h3>Here are all the brands that have been stocked by this store:</h3>
+
+    <ul>
+      <% @kiatu_brand().each() do |kiatu_brand| %>
+        <li><%= kiatu_brand.store %> </li>
+    </ul>
+
+    <% else %>
+        <h3>No brand has been stored in this store yet!</h3>
+    <% end %>
+
+<div class="container">
+    <h3><a href="/kiatu_stores/<%= kiatu_store.id() %>/edit">Edit <%= @kiatu_store.name() %></a></h3>
+    <a href="/"><button class ="btn">Home</a>

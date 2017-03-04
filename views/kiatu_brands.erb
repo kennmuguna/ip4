@@ -1,0 +1,17 @@
+<center><h1>Available brands</h1></center>
+
+# not sure about the code for displaying all brand items
+
+<% if @kiatu_brands.name().all() %>
+    <center><h3>Here's a list of all your saved brands</h3></center>
+
+    <ul>
+      <% @kiatu_brand().each do |kiatu_brand| %>
+        <li><%= kiatu_brand.name() %></li>
+      <% end%>
+    <ul>
+
+  <% else %>
+    <h3>No brands have been added yet</h3>
+  <% end %>
+
